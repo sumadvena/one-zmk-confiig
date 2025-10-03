@@ -2,8 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
 #define LWR 1
@@ -30,9 +28,9 @@
         default_layer {
             display-name = "MAIN";
             bindings = <
-&mt LALT RBKT     &kp Q  &kp W  &kp E        &kp R           &kp T        &kp Y        &kp U          &kp I        &kp O    &kp P     &mt RGUI LBKT
-&mt LSHIFT GRAVE  &kp A  &kp S  &kp D        &kp F           &kp G        &kp H        &kp J          &kp K        &kp L    &kp SEMI  &mt RSHIFT SQT
-&mt LCTRL MINUS   &kp Z  &kp X  &kp C        &kp V           &kp B        &kp N        &kp M          &kp COMMA    &kp DOT  &kp FSLH  &mt RCTRL BSLH
+&mt LALT RBKT     &kp Q  &kp W  &kp F        &kp P           &kp B        &kp J        &kp L          &kp U        &kp Y    &kp SEMI  &mt RGUI LBKT
+&mt LSHIFT GRAVE  &kp A  &kp R  &kp S        &kp T           &kp G        &kp M        &kp N          &kp E        &kp I    &kp O     &mt RSHIFT SQT
+&mt LCTRL MINUS   &kp Z  &kp X  &kp C        &kp D           &kp V        &kp K        &kp H          &kp COMMA    &kp DOT  &kp FSLH  &mt RCTRL BSLH
                                 &lt RSE TAB  &mt LGUI SPACE  &lt LWR RET  &lt LWR ESC  &mt RALT BSPC  &lt RSE DEL
             >;
         };
@@ -60,10 +58,10 @@
         adjust_layer {
             display-name = "ADJ";
             bindings = <
-&bootloader  &studio_unlock  &none   &none   &none   &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &studio_unlock  &bootloader
-&bt BT_CLR   &bt BT_SEL 0    &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &bt BT_SEL 0    &bt BT_CLR
-&sys_reset   &bt BT_SEL 1    &none   &none   &none   &none   &mkp MB4        &mkp LCLK       &mkp RCLK     &mkp MB5         &bt BT_SEL 1    &sys_reset
-                                     &trans  &none   &trans  &none           &trans          &trans
+&bootloader  &studio_unlock  &none   &none   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &studio_unlock  &bootloader
+&bt BT_CLR   &bt BT_SEL 0    &trans  &trans  &trans     &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &bt BT_SEL 0    &bt BT_CLR
+&sys_reset   &bt BT_SEL 1    &none   &none   &sk LSHFT  &sk LCTRL  &mkp MB4        &mkp LCLK       &mkp RCLK     &mkp MB5         &bt BT_SEL 1    &sys_reset
+                                     &trans  &none      &trans     &none           &trans          &trans
             >;
         };
     };
